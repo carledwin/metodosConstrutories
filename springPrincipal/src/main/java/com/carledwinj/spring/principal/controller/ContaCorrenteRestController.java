@@ -18,14 +18,14 @@ public class ContaCorrenteRestController {
 	private static Logger log = LoggerFactory.getLogger(ContaCorrenteRestController.class);
 	
 	@Autowired
-	private ContaService contaRepository;
+	private ContaService service;
 	
 	@GetMapping("/contas")
 	public List<ContaCorrente> todas(){
 		
 		log.info("Executando ContaCorrenteRestController.todas()..."); 
 		
-		return contaRepository.todas();
+		return service.todas();
 	}
 
 }
